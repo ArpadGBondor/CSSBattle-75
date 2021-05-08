@@ -1,0 +1,81 @@
+body {
+  background-color: #171d23;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+
+.body {
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.container * {
+  position: absolute;
+  background: var(--b, #191919);
+  padding: var(--p, 0);
+  margin: var(--m);
+  border-radius: var(--r, 0);
+}
+
+.container i {
+  --b: #fe5f55;
+  --p: 65px;
+  --r: 60px 60px 0 0;
+  --m: 75px 135px;
+}
+
+.container u {
+  --b: #a64942;
+  --p: 50px 75px;
+  --m: 5px -75px;
+  --r: 55px 55px 45px 45px;
+}
+
+.container img {
+  transform: rotate(var(--t, 45deg));
+  --b: #000;
+  --p: 5px 10px;
+  border: 5px solid #fe5f55;
+  --r: 50%;
+  --m: 75px 145px;
+}
+
+.container img + img {
+  --t: 135deg;
+  --m: 75px 225px;
+}
+
+.container i img {
+  --p: 5px;
+  --m: -15px -40px;
+  border: 0;
+}
+
+.container i * + img {
+  --m: -15px 30px;
+}
+
+.container u img {
+  --p: 15px 10px;
+  --m: -30px -50px;
+}
+
+.container u * + img {
+  --m: -30px 30px;
+}
